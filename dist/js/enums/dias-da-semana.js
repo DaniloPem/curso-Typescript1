@@ -8,11 +8,3 @@ export var DiasDaSemana;
     DiasDaSemana[DiasDaSemana["sexta"] = 5] = "sexta";
     DiasDaSemana[DiasDaSemana["sabado"] = 6] = "sabado";
 })(DiasDaSemana || (DiasDaSemana = {}));
-// Podem ter valores tambem:
-//   domingo = 0, 
-//   segunda = 1 ,
-//   terca = 2, 
-//   quarta = 3,
-//   quinta = 4,
-//   sexta = 5,
-//   sabado = 6

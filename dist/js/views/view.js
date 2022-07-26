@@ -1,7 +1,10 @@
 export class ViewGeral {
     constructor(seletor, escapar) {
         this.escapar = false;
-        this.elemento = document.querySelector(seletor); //nao funciona no primeiro parámetro ou o constructor só pode ter parámtros opcionais
+        const elemento = document.querySelector(seletor);
+        if (elemento) {
+            this.elemento = elemento;
+        }
         if (escapar) {
             this.escapar = escapar;
         }

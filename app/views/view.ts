@@ -3,7 +3,10 @@ export abstract class ViewGeral<T> {
   private escapar = false;
 
   constructor (seletor: string, escapar?: boolean) { //o simbolo "?" indica que o parámetro é opcional
-    this.elemento = document.querySelector(seletor);  //nao funciona no primeiro parámetro ou o constructor só pode ter parámtros opcionais
+    const elemento = document.querySelector(seletor);  //nao funciona no primeiro parámetro ou o constructor só pode ter parámtros opcionais
+    if (elemento) {
+      this.elemento = elemento as HTMLInputElement;
+    }
     if(escapar) {
       this.escapar = escapar;
     }
